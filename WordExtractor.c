@@ -405,11 +405,7 @@ url_data_t *format_url (const unsigned char *url) {
             xmalloc((strlen(strings[5])*sizeof(unsigned char))+1);
         memcpy(data->path, strings[5], strlen(strings[5]));
     }
-    /*
-    out(">%s\n", data->path);
-    out(">%s\n", data->domain);
-    out(">%d\n", data->port);
-    */
+    
     if (data->domain != null && data->path != null && data->protocol != null) 
         return data;
     return (url_data_t *) null;
